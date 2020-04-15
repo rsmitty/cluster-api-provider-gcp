@@ -80,7 +80,7 @@ func (s *Service) CreateInstance(scope *scope.MachineScope) (*compute.Instance, 
 				Boot:       true,
 				InitializeParams: &compute.AttachedDiskInitializeParams{
 					DiskSizeGb:  30,
-					DiskType:    fmt.Sprintf("zones/%s/diskTypes/%s", scope.Zone(), "pd-standard"),
+					DiskType:    fmt.Sprintf("zones/%s/diskTypes/%s", scope.Zone(), "pd-ssd"),
 					SourceImage: sourceImage,
 				},
 			},
